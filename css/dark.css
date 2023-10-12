@@ -1,0 +1,61 @@
+.dark
+{
+    background-color: rgb(61, 76, 143);
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dark span
+{
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    display: block;
+    color: #fff;
+    background-color: none;
+}
+
+.dark::after
+{
+    display: block;
+    background-color: #fffbf5;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1.5px 1.5px rgb(0, 0, 0, .5);
+    content: "";
+    transition: all .5s ease;
+}
+
+.dark.active
+{
+    background: #fdd384;
+}
+
+.dark.dark.active::after
+{
+    left: unset;
+    right: 0;
+}
+
+body
+{
+    background: #fff;
+    color: black;
+}
+
+body.temaDark
+{
+    background: #222;
+    color: #fff;
+}
